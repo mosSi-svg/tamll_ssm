@@ -86,7 +86,7 @@
         新增属性
     </div>
         <div class="panel-body">
-            <form method="post" action="/admin_property_add?cid=${c.id}" id="addForm">
+            <form method="post" action="/admin_property_add" id="addForm">
            <table>
                <tr>
                    <td>属性名称</td>
@@ -96,7 +96,7 @@
                </tr>
                <tr class="submitTR">
                <td colspan="2" align="center">
-               <input type="hidden" value="${c.id}">
+               <input type="hidden"  name ="cid" value="${c.id}">
                    <input type="submit" value="提交属性" class=" btn btn-success">
                </td>
                </tr>

@@ -25,16 +25,14 @@ public class PropertyController {
     @RequestMapping("admin_property_add")
     public  String  add(Model model , Property property){
     propertyService.add(property);
-        return  "redirect:admin_property_list?cid="+property.getCid();
+    return  "redirect:admin_property_list?cid="+property.getCid();
     }
-
     @RequestMapping("admin_property_delete")
     public  String  delete( Model model , int id){
        int ID = propertyService.get(id).getCid();
         propertyService.delete(id);
 
         return  "redirect:admin_property_list?cid="+ID;
-
     }
 
     @RequestMapping("admin_property_edit")
@@ -67,9 +65,5 @@ public class PropertyController {
         model.addAttribute("page", page);
         return "admin/listProperty";
     }
-
-
-
-
 
 }

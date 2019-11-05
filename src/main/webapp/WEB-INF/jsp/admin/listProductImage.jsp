@@ -95,7 +95,7 @@
                                 <td>${productImage.id}
                                 </td>
                                 <td>
-                                    <a title="点击查看原图" href="img/productSingle/${productImage.id}.jpg" ><img src="img/productSingle/${productImage.id}.jpg"></a>
+                                    <a title="点击查看原图" href="img/productSingle/${productImage.id}.jpg" ><img height="50px" src="img/productSingle/${productImage.id}.jpg"></a>
                                 </td>
                                 <td>
                                     <a deleteLink="true" href="/admin_productImage_delete?id=${productImage.id}"><span class="     glyphicon glyphicon-trash"></span></a>
