@@ -5,8 +5,8 @@ import java.util.List;
 
 public interface  ProductImageService {
 
-    String type_single = "type_single";
-    String type_detail = "type_detail";
+  public   String type_single = "type_single";
+    public  String type_detail = "type_detail";
     public  void add(ProductImage productImage);
 
     public  void delete(int id);
