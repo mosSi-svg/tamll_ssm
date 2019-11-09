@@ -49,7 +49,7 @@
                 <td>${product.name}</td><td>${product.subTitle}</td><td> ${product.originalPrice}</td>
                 <td>${product.promatePrice}</td><td>${product.stock}</td>
                 <td> <a href="admin_productImage_list?pid=${product.id}"><span class="glyphicon glyphicon-picture"></span></a></td>
-                <td><a href="admin_propertyValue_edit?$id={product.id}"><span class="glyphicon glyphicon-th-list"></span></a></td>
+                <td><a href="admin_propertyValue_edit?pid=${product.id}"><span class="glyphicon glyphicon-th-list"></span></a></td>
                 <td>
                     <a href="admin_product_edit?id=${product.id}"><span
                             class="glyphicon glyphicon-edit"></span></a>

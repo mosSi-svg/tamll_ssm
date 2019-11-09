@@ -28,7 +28,7 @@ public class PropertyValueImpl  implements PropertyValueService {
 
     for( PropertyValue pv : lists ){
 
-        Property pro = propertyService.get ( pv.getPid ());
+        Property pro = propertyService.get ( pv.getPtid ());
 
         pv.setProperty (pro);
 
@@ -42,11 +42,11 @@ public class PropertyValueImpl  implements PropertyValueService {
     @Override
     public PropertyValue get(int ptid, int pid) {
         PropertyValueExample propertyExample = new PropertyValueExample ();
-        propertyExample.createCriteria ().andPidEqualTo (pid).andIdEqualTo (ptid);
+        propertyExample.createCriteria ().andPidEqualTo (pid).andPtidEqualTo (ptid);
         List<PropertyValue> pros = propertyValueMapper.selectByExample (propertyExample);
-        if( pros == null)
+        if( pros.isEmpty ())
             return  null;
-
+        else
             return pros.get (0);
     }
 
@@ -56,7 +56,7 @@ public class PropertyValueImpl  implements PropertyValueService {
 
         for (Property pt: pts) {
             PropertyValue pv = get(pt.getId(),p.getId());
-            if(null==pv){
+            if(pv == null ){
                 pv = new PropertyValue();
                 pv.setPid(p.getId());
                 pv.setPtid(pt.getId());

@@ -13,11 +13,13 @@
             var value = $(this).val();
             var page = "admin_propertyValue_update";
             var pvid = $(this).attr("pvid");
+            var ptid=$(this).attr("ptid");
+            var pid = $(this).attr("pid");
             var parentSpan = $(this).parent("span");
             parentSpan.css("border","1px solid yellow");
             $.post(
                 page,
-                {"value":value,"id":pvid},
+                {"value":value,"id":pvid,"pid":pid,"ptid":ptid },
                 function(result){
                     if("success"==result)
                         parentSpan.css("border","1px solid green");
@@ -41,7 +43,8 @@
         <c:forEach items="${pvs}" var="pv">
             <div class="eachPV">
                 <span class="pvName" >${pv.property.name}</span>
-                <span class="pvValue"><input class="pvValue" pvid="${pv.id}" type="text" value="${pv.value}"></span>
+                <span class="pvValue"><input class="pvValue" ptid="${pv.ptid}" pid="${pv.pid}" pvid="${pv.id}" type="text" value="${pv.value}">
+                </span>
             </div>
         </c:forEach>
         <div style="clear:both"></div>
