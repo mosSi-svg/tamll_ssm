@@ -1,6 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="exploded-war" name="tmall_ssm">
-    <output-path>$PROJECT_DIR$/out/artifacts/tmall_ssm</output-path>
-    <root id="root" />
-  </artifact>
-</component>
